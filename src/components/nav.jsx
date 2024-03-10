@@ -4,7 +4,7 @@ import { HiMenuAlt2 } from 'react-icons/hi';
 
 const Nav = () => {
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.setAttribute('data-theme', 'light');
   }, []);
 
   return (
