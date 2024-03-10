@@ -12,11 +12,12 @@ const hero = () => {
       <div className='hero-overlay bg-opacity-60'></div>
       <div className='hero-content text-center text-neutral-content'>
         <div className='max-w-md'>
-          <h1 className='mb-5 text-5xl font-bold'>TuftCraft Creations</h1>
-          <p className='mb-5'>
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+          <h1 className='mb-5 text-5xl text-gray-100 font-bold'>
+            TuftCraft Creations
+          </h1>
+          <p className='mb-5 text-xl font-semi-bold text-gray-100'>
+            High-quality custom 1-of-1 rugs, uniquely handcrafted for your
+            space.
           </p>
           <button className='btn btn-primary'>Get Started</button>
         </div>

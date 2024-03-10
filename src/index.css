@@ -4,7 +4,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
+  scrollbar-color: gray #626262;
 }
 
 /* For Chrome, Safari and Opera */
@@ -13,11 +13,11 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: transparent;
+  background: #626262;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(155, 155, 155, 0.7);
+  background-color: gray;
   border-radius: 20px;
   border: transparent;
 }
