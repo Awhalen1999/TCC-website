@@ -5,10 +5,13 @@ import logo from '../assets/tcc-logo.png';
 import logoAlt from '../assets/tcc-logo-2.png';
 
 const Nav = () => {
-  const [theme, setTheme] = useState('mylight');
+  const [theme, setTheme] = useState(
+    localStorage.getItem('theme') || 'mylight'
+  );
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   const handleThemeChange = (e) => {
