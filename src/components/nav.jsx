@@ -32,11 +32,13 @@ const Nav = () => {
         </div>
         <a className='btn btn-ghost text-xl'>
           <img
-            src='path-to-your-logo.png'
+            src={logo}
             alt='Logo'
-            className='inline-block mr-2'
+            className='inline-block'
+            style={{ height: '2em' }}
           />
-          TuftCraft Creations
+          <span className='hidden sm:inline'>TuftCraft Creations</span>
+          <span className='sm:hidden'>TCC</span>
         </a>
       </div>
       <div className='navbar-center hidden lg:flex'>
