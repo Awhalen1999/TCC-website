@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import { HiMenuAlt2 } from 'react-icons/hi';
+import logo from '../assets/tcc-logo.png';
 
 const Nav = () => {
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', 'light');
+    document.documentElement.setAttribute('data-theme', 'mylight');
   }, []);
 
   return (
@@ -29,7 +30,14 @@ const Nav = () => {
             </li>
           </ul>
         </div>
-        <a className='btn btn-ghost text-xl'>TuftCraft Creations</a>
+        <a className='btn btn-ghost text-xl'>
+          <img
+            src='path-to-your-logo.png'
+            alt='Logo'
+            className='inline-block mr-2'
+          />
+          TuftCraft Creations
+        </a>
       </div>
       <div className='navbar-center hidden lg:flex'>
         <ul className='menu menu-horizontal px-1'>
@@ -53,9 +61,12 @@ const Nav = () => {
               className='theme-controller mr-3'
               onChange={(e) => {
                 if (e.target.checked) {
-                  document.documentElement.setAttribute('data-theme', 'light');
+                  document.documentElement.setAttribute(
+                    'data-theme',
+                    'mylight'
+                  );
                 } else {
-                  document.documentElement.setAttribute('data-theme', 'dark');
+                  document.documentElement.setAttribute('data-theme', 'mydark');
                 }
               }}
             />
