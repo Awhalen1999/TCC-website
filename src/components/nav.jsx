@@ -1,15 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import { HiMenuAlt2 } from 'react-icons/hi';
 import logo from '../assets/tcc-logo.png';
+import logoAlt from '../assets/tcc-logo-2.png';
 
 const Nav = () => {
+  const [theme, setTheme] = useState('mylight');
+
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', 'mylight');
-  }, []);
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  const handleThemeChange = (e) => {
+    const newTheme = e.target.checked ? 'mydark' : 'mylight';
+    setTheme(newTheme);
+  };
 
   return (
-    <div className='navbar bg-base-100 border'>
+    <div className='navbar bg-base-100 font-main'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>
@@ -20,65 +28,79 @@ const Nav = () => {
             className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
           >
             <li>
-              <a>Item 1</a>
+              <a>Home</a>
             </li>
             <li>
-              <a>Item 2</a>
+              <a>About us</a>
             </li>
             <li>
-              <a>Item 3</a>
+              <a>Shop</a>
+            </li>
+            <li>
+              <a>Info</a>
+              <ul className='p-2'>
+                <li>
+                  <a>Product Care/Cleaning</a>
+                </li>
+                <li>
+                  <a>Rug Creation Process</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
         <a className='btn btn-ghost text-xl'>
           <img
-            src={logo}
+            src={theme === 'mydark' ? logoAlt : logo}
             alt='Logo'
             className='inline-block'
             style={{ height: '2em' }}
           />
-          <span className='hidden sm:inline'>TuftCraft Creations</span>
-          <span className='sm:hidden'>TCC</span>
+          <span className='hidden sm:inline font-header'>
+            TuftCraft Creations
+          </span>
+          <span className='sm:hidden font-header'>TCC</span>
         </a>
       </div>
       <div className='navbar-center hidden lg:flex'>
         <ul className='menu menu-horizontal px-1'>
           <li>
-            <a>Item 1</a>
+            <a>Home</a>
           </li>
           <li>
-            <a>Item 2</a>
+            <a>About us</a>
           </li>
           <li>
-            <a>Item 3</a>
+            <a>Shop</a>
+          </li>
+          <li>
+            <details>
+              <summary>Info</summary>
+              <ul className='p-2'>
+                <li>
+                  <a>Product Care/Cleaning</a>
+                </li>
+                <li>
+                  <a>Rug Creation Process</a>
+                </li>
+              </ul>
+            </details>
           </li>
         </ul>
       </div>
       <div className='navbar-end'>
-        <li className='flex items-center'>
+        <li className='flex items-center mr-4'>
           <label className='swap swap-rotate'>
-            {/* this hidden checkbox controls the state */}
             <input
               type='checkbox'
               className='theme-controller mr-3'
-              onChange={(e) => {
-                if (e.target.checked) {
-                  document.documentElement.setAttribute(
-                    'data-theme',
-                    'mylight'
-                  );
-                } else {
-                  document.documentElement.setAttribute('data-theme', 'mydark');
-                }
-              }}
+              onChange={handleThemeChange}
+              checked={theme === 'mydark'}
             />
-            {/* sun icon */}
-            <FiSun className='swap-off fill-current w-7 h-7' />
-            {/* moon icon */}
-            <FiMoon className='swap-on fill-current w-7 h-7' />
+            <FiSun className='swap-on fill-current w-7 h-7' />
+            <FiMoon className='swap-off fill-current w-7 h-7' />
           </label>
         </li>
-        <a className='btn btn-ghost btn-outline ml-4'>Button</a>
       </div>
     </div>
   );
