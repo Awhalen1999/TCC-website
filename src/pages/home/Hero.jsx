@@ -1,5 +1,6 @@
 import React from 'react';
 import heroImage from '../../assets/hero-image.png';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -19,9 +20,11 @@ const Hero = () => {
             High-quality custom 1-of-1 rugs, uniquely handcrafted for your
             space.
           </p>
-          <button className='btn btn-primary lg:btn-lg md:btn-primary'>
-            Shop Rugs
-          </button>
+          <Link to='/shop'>
+            <button className='btn btn-primary lg:btn-lg md:btn-primary'>
+              Shop Rugs
+            </button>
+          </Link>
         </div>
       </div>
     </div>

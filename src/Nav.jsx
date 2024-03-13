@@ -3,6 +3,7 @@ import { FiSun, FiMoon } from 'react-icons/fi';
 import { HiMenuAlt2 } from 'react-icons/hi';
 import logo from './assets/tcc-logo.png';
 import logoAlt from './assets/tcc-logo-2.png';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [theme, setTheme] = useState(
@@ -31,28 +32,20 @@ const Nav = () => {
             className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
           >
             <li>
-              <a>Home</a>
+              <Link to='/shop'>Shop</Link>
             </li>
             <li>
-              <a>About us</a>
+              <Link to='/rug-info'>Our Rugs</Link>
             </li>
             <li>
-              <a>Shop</a>
+              <Link to='/product-care'>Product Care & Maintenance</Link>
             </li>
             <li>
-              <a>Info</a>
-              <ul className='p-2'>
-                <li>
-                  <a>Product Care/Cleaning</a>
-                </li>
-                <li>
-                  <a>Rug Creation Process</a>
-                </li>
-              </ul>
+              <Link to='/contact'>Contact Us</Link>
             </li>
           </ul>
         </div>
-        <a className='btn btn-ghost text-xl'>
+        <Link to='/' className='btn btn-ghost text-xl'>
           <img
             src={theme === 'mydark' ? logoAlt : logo}
             alt='Logo'
@@ -63,31 +56,21 @@ const Nav = () => {
             TuftCraft Creations
           </span>
           <span className='sm:hidden font-header'>TCC</span>
-        </a>
+        </Link>
       </div>
       <div className='navbar-center hidden lg:flex'>
         <ul className='menu menu-horizontal px-1'>
           <li>
-            <a>Home</a>
+            <Link to='/shop'>Shop</Link>
           </li>
           <li>
-            <a>About us</a>
+            <Link to='/rug-info'>Our Rugs</Link>
           </li>
           <li>
-            <a>Shop</a>
+            <Link to='/product-care'>Product Care & Maintenance</Link>
           </li>
           <li>
-            <details>
-              <summary>Info</summary>
-              <ul className='p-2'>
-                <li>
-                  <a>Product Care/Cleaning</a>
-                </li>
-                <li>
-                  <a>Rug Creation Process</a>
-                </li>
-              </ul>
-            </details>
+            <Link to='/contact'>Contact Us</Link>
           </li>
         </ul>
       </div>
