@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaAngleDoubleRight } from 'react-icons/fa';
 
-const FeaturedMain = () => {
+const FeaturedHome = () => {
   return (
     <div className='w-[90vw] mx-auto mt-20'>
       <h2 className='text-4xl font-bold mb-5 font-header text-left'>
@@ -55,4 +55,4 @@ const FeaturedMain = () => {
   );
 };
 
-export default FeaturedMain;
+export default FeaturedHome;

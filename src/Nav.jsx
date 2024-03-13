@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import { HiMenuAlt2 } from 'react-icons/hi';
-import logo from '../assets/tcc-logo.png';
-import logoAlt from '../assets/tcc-logo-2.png';
+import logo from './assets/tcc-logo.png';
+import logoAlt from './assets/tcc-logo-2.png';
 
 const Nav = () => {
   const [theme, setTheme] = useState(

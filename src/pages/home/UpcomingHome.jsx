@@ -1,8 +1,8 @@
 import React from 'react';
-import OnePiecePreview from '../assets/one-piece-preview.png';
-import HunterPreview from '../assets/hunter-preview.png';
+import OnePiecePreview from '../../assets/one-piece-preview.png';
+import HunterPreview from '../../assets/hunter-preview.png';
 
-const UpcomingMain = () => {
+const UpcomingHome = () => {
   return (
     <div className='w-[90vw] mx-auto font-main my-20 flex flex-col'>
       <h2 className='text-4xl font-bold mb-5 font-header text-left'>
@@ -25,4 +25,4 @@ const UpcomingMain = () => {
   );
 };
 
-export default UpcomingMain;
+export default UpcomingHome;
